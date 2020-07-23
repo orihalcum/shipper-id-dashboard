@@ -1,0 +1,54 @@
+.main-sidebar {
+  
+  height: 100vh;
+  width: 100%;
+  max-width: 16rem;
+
+  &.collapse {
+    max-width: 3.8rem;
+  }
+
+  &__logo {
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    img {
+      height: 35px;
+      width: auto;
+    }
+  }
+
+  &__nav {
+
+    height: auto;
+    width: 100%;
+
+    &__item {
+
+      border-left: 6px solid transparent;
+      padding: 15px;
+
+      &.active, &:hover {
+        border-left-color: $primary-color;
+      }
+
+      &.active {
+        a {
+          color: $primary-color !important;
+        }
+      }
+
+      &__link {
+        
+        text-decoration: none;
+        color: $black-color;
+
+        &__title {
+          margin-left: 15px;
+        }
+
+      }
+
+    }
+  }
+
+}

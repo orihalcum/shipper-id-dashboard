@@ -8,6 +8,7 @@ import {
 import * as serviceWorker from './serviceWorker'
 import PageDriver from './pages/driver'
 import PageDashboard from './pages/dashboard'
+import './scss/index.scss'
 
 const App = () => {
   return (

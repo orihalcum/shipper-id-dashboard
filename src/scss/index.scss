@@ -1,1 +1,11 @@
-@import './base/variables'
+// BASE
+@import './base/variables';
+@import './base/generals';
+
+// COMPONENTS
+@import './components/sidebar';
+@import './components/header';
+@import './components/main';
+
+
+// PAGES

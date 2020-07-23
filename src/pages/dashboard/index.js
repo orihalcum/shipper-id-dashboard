@@ -1,11 +1,8 @@
 import React from 'react';
+import MainLayout from '../../components/layouts/main';
 
 const PageDashboard = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+  return <MainLayout />
 };
 
 export default PageDashboard;
