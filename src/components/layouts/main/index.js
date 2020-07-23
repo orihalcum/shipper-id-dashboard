@@ -5,10 +5,15 @@ import MainContent from './content';
 
 const MainLayout = ({ children }) => {
 
-  const [collapse, toggleSideBar] = useState(false)
+  const [collapse, setCollapse] = useState((localStorage.getItem('collapse') === 'true') || false)
+
+  const toggleSideBar = (val) => {
+    setCollapse(val)
+    localStorage.setItem('collapse', val)
+  }
 
   useEffect(() => {
-    console.log('collapse', collapse)
+    console.log('useEffect collapse', collapse)
   }, [collapse])
 
   return (

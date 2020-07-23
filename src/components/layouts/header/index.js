@@ -6,7 +6,7 @@ const MainHeader = ({ collapse, toggleSideBar }) => {
   return (
     <div className="main-header">
       <div className="main-header__left">
-        <a href="#" onClick={ () => toggleSideBar(prev => !prev) } aria-label="menu-fold-unfold">
+        <a href="#" onClick={ () => toggleSideBar(!collapse) } aria-label="menu-fold-unfold">
           { !collapse ? <MenuFoldOutlined /> : <MenuUnfoldOutlined /> }
         </a>
       </div>
