@@ -16,7 +16,12 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={ PageDashboard } />
         <Route exact path="/dashboard" component={ PageDashboard } />
+        <Route exact path="/pickup" component={ PageDashboard } />
+        <Route exact path="/order" component={ PageDashboard } />
         <Route exact path="/driver" component={ PageDriver } />
+        <Route exact path="/merchant" component={ PageDashboard } />
+        <Route exact path="/laporan" component={ PageDashboard } />
+        <Route exact path="/profil" component={ PageDashboard } />
       </Switch>
     </Router>
   )

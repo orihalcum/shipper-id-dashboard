@@ -10,7 +10,7 @@
   }
 
   .main-content {
-    background-color: #EEE;
+    background-color: $background-color;
     height: calc(100% - 64px);
     width: 100%;
     padding: $default-margin-or-padding;

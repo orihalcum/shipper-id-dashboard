@@ -20,7 +20,7 @@ const MainSideBar = ({ collapse }) => {
 
   useEffect(() => {
     setNavMenu(navMenu.map(v => { v.active = location.pathname === v.link; return v; }))
-  }, [])
+  }, [location])
 
   return (
     <div className={ `main-sidebar ${ collapse ? 'collapse' : '' }` }>
