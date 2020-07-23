@@ -1,4 +1,70 @@
 .main-header {
   height: 64px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  a {
+    color: $black-color;
+    &:hover {
+      color: $primary-color !important;
+    }
+  }
+  .anticon {
+    font-size: 19px;
+  }
+  &__left {
+
+  }
+  &__right {
+    display: flex;
+    div {
+      font-size: 12px;
+      &:first-child {
+        display: flex;
+        align-items: center;
+        .anticon {
+          margin-left: 15px;
+        }
+        border-right: 3px solid $light-grey-color;
+        padding-right: 15px;
+        margin-right: 15px;
+        a {
+          position: relative;
+        }
+      }
+      &:last-child {
+        display: flex;
+        align-items: center;
+        color: #AAA;
+        img { height: 35px; margin-left: 15px; }
+        a {
+          text-decoration: none;
+          color: $link-color;
+        }
+      }
+
+    }
+  }
+
+  // Misc
+  .anticon-phone {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  .has-notification::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: $primary-color;
+  }
+
 }
