@@ -6,25 +6,15 @@
   transition: all ease-out .3s;
   overflow: hidden;
 
-  &.collapse {
-    max-width: 4.15rem;
-    .main-sidebar__nav {
-      &__item {
-        &__link {
-          &__title {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
   &__logo {
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: $default-margin-or-padding-sm;
+    margin-bottom: $default-margin-or-padding-sm;
     img {
       height: 35px;
       width: auto;
+    }
+    a {
+      display: none;
     }
   }
 
@@ -49,7 +39,7 @@
         text-decoration: none;
         color: $black-color;
         &__title {
-          margin-left: 15px;
+          margin-left: $default-margin-or-padding-sm;
           font-size: 13px;
         }
       }

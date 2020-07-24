@@ -11,7 +11,7 @@ const MainHeader = ({ collapse, toggleSideBar }) => {
         </a>
       </div>
       <div className="main-header__right">
-        <div>
+        <div className="main-header__right__icons">
           <a href="#">
             <PhoneOutlined/>
           </a>
@@ -19,8 +19,8 @@ const MainHeader = ({ collapse, toggleSideBar }) => {
             <BellOutlined />
           </a>
         </div>
-        <div>
-          Hello, &nbsp; <a href="#">Dzulfan Fadli</a>
+        <div className="main-header__right__user">
+          <span>Hello, &nbsp; <a href="#">Dzulfan Fadli</a></span>
           <img src="/image-user.png" alt="user" />
         </div>
       </div>

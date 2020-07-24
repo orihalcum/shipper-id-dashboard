@@ -6,6 +6,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
+  
   a {
     color: $black-color;
     &:hover {
@@ -20,32 +21,28 @@
   }
   &__right {
     display: flex;
-    div {
-      font-size: 12px;
-      &:first-child {
-        display: flex;
-        align-items: center;
-        .anticon {
-          margin-left: 15px;
-        }
-        border-right: 3px solid $light-grey-color;
-        padding-right: 15px;
-        margin-right: 15px;
-        a {
-          position: relative;
-        }
+    font-size: 12px;
+    &__icons {
+      display: flex;
+      align-items: center;
+      .anticon {
+        margin-left: 15px;
       }
-      &:last-child {
-        display: flex;
-        align-items: center;
-        color: #AAA;
-        img { height: 35px; margin-left: 15px; }
-        a {
-          text-decoration: none;
-          color: $link-color;
-        }
+      padding-right: 15px;
+      margin-right: 15px;
+      a {
+        position: relative;
       }
-
+    }
+    &__user {
+      display: flex;
+      align-items: center;
+      color: #AAA;
+      img { height: 35px; margin-left: 15px; }
+      a {
+        text-decoration: none;
+        color: $link-color;
+      }
     }
   }
 

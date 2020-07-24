@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MainSideBar from '../sidebar';
 import MainHeader from '../header';
-import MainContent from './content';
 
 const MainLayout = ({ children }) => {
 
@@ -16,14 +15,17 @@ const MainLayout = ({ children }) => {
     console.log('useEffect collapse', collapse)
   }, [collapse])
 
+  const sideBarProps = {
+    collapse,
+    toggleSideBar
+  }
+
   return (
     <div className="main-layout">
-      <MainSideBar collapse={ collapse } />
+      <MainSideBar { ...sideBarProps } />
       <div className="main-container">
-        <MainHeader toggleSideBar={ toggleSideBar } collapse={ collapse } />
-        <MainContent>
-          { children }
-        </MainContent>
+        <MainHeader { ...sideBarProps } />
+        { children }
       </div>
     </div>
   );

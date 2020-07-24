@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, NavLink } from 'react-router-dom'
 
-import { HomeOutlined, CalendarOutlined, FileDoneOutlined, CarOutlined, ShopOutlined, PieChartOutlined, UserOutlined } from '@ant-design/icons'
+import { HomeOutlined, CalendarOutlined, FileDoneOutlined, CarOutlined, ShopOutlined, PieChartOutlined, UserOutlined, MenuFoldOutlined } from '@ant-design/icons'
 
 const NAV_MENU = [
   { title: 'Beranda', icon: <HomeOutlined />, link: "/", active: false },
@@ -13,7 +13,7 @@ const NAV_MENU = [
   { title: 'Profil', icon: <UserOutlined />, link: "/profil", active: false },
 ]
 
-const MainSideBar = ({ collapse }) => {
+const MainSideBar = ({ collapse, toggleSideBar }) => {
 
   const location = useLocation();
   const [navMenu, setNavMenu] = useState(NAV_MENU)
@@ -26,6 +26,9 @@ const MainSideBar = ({ collapse }) => {
     <div className={ `main-sidebar ${ collapse ? 'collapse' : '' }` }>
       <div className="main-sidebar__logo">
         <img src="/shipperLogo.png" alt="shipper-logo"/>
+        <a href="#" onClick={ () => toggleSideBar(!collapse) } aria-label="menu-fold-unfold">
+          <MenuFoldOutlined />
+        </a>
       </div>
       <div className="main-sidebar__nav">
         { navMenu.map((v, k) => <NavItem key={k} {...v} /> ) }

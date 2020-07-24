@@ -4,8 +4,10 @@ import MainLayout from '../../components/layouts/main';
 const PageDashboard = () => {
   return (
     <MainLayout>
-      <div style={{ backgroundColor: 'white', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <img src="/shipperLogo.png" alt="shipper" style={{ height: 60 }}/>
+      <div className="main-content">
+        <div style={{ backgroundColor: 'white', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <img src="/shipperLogo.png" alt="shipper" style={{ height: 60 }}/>
+        </div>
       </div>
     </MainLayout>
   )

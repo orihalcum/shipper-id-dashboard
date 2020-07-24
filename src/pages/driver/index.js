@@ -4,7 +4,14 @@ import MainLayout from '../../components/layouts/main';
 const PageDriver = () => {
   return (
     <MainLayout>
-      
+      <div className="main-content">
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+      </div>
     </MainLayout>
   );
 };
