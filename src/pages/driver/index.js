@@ -36,7 +36,7 @@ const PageDriver = () => {
   }
 
   const handleChangeSearch = (value) => {
-    if(value == '') setDriver(driverSource)
+    if(value === '') setDriver(driverSource)
     setDriver(driverSource.filter(v => v.id.toLowerCase().includes(value.toLowerCase())))
   }
 

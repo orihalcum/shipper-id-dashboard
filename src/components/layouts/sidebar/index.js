@@ -19,7 +19,9 @@ const MainSideBar = ({ collapse, toggleSideBar }) => {
   const [navMenu, setNavMenu] = useState(NAV_MENU)
 
   useEffect(() => {
-    setNavMenu(navMenu.map(v => { v.active = location.pathname === v.link; return v; }))
+    let nav = navMenu.map(v => { v.active = location.pathname === v.link; return v; })
+    setNavMenu(nav)
+    // eslint-disable-next-line
   }, [location])
 
   return (
@@ -27,7 +29,7 @@ const MainSideBar = ({ collapse, toggleSideBar }) => {
       <div className="main-sidebar__logo">
         <img className="main-sidebar__logo__mobile" src="/shipperLogo.png" alt="shipper-logo"/>
         <img className="main-sidebar__logo__desktop" src={ !collapse ? "/shipperLogo.png" : "/shipperIcon.png" } alt="shipper-logo"/>
-        <a href="#" onClick={ () => toggleSideBar(!collapse) } aria-label="menu-fold-unfold">
+        <a href="/" onClick={ e => { e.preventDefault(); toggleSideBar(!collapse) } } aria-label="menu-fold-unfold">
           <MenuFoldOutlined />
         </a>
       </div>

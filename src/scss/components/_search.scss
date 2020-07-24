@@ -4,19 +4,23 @@
 
   input {
     
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     padding: $form-padding;
     padding-left: 40px;
+    outline: none;
+    border-top: none;
     border: 1px solid $light-grey-color;
     border-radius: $form-radius;
+    box-shadow: none;
+    background-color: #FFF;
 
     &::placeholder {
       color: $grey-color;
       font-weight: 500;
-    }
-  
-    &--md {
-      height: 35px;
-      width: 150px;
     }
 
     &:focus {
@@ -25,6 +29,13 @@
       @include animation-pulse;
     }
     
+  }
+
+  &--md {
+    input {
+      height: 40px;
+      width: 150px;
+    }
   }
 
   .anticon {

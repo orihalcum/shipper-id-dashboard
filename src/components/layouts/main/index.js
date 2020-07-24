@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MainSideBar from '../sidebar';
 import MainHeader from '../header';
 
@@ -10,11 +10,7 @@ const MainLayout = ({ children }) => {
     setCollapse(val)
     localStorage.setItem('collapse', val)
   }
-
-  useEffect(() => {
-    // console.log('useEffect collapse', collapse)
-  }, [collapse])
-
+  
   const sideBarProps = {
     collapse,
     toggleSideBar
