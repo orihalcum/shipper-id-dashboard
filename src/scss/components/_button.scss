@@ -1,0 +1,36 @@
+.button {
+  
+  border: 1px solid $primary-color;
+  padding: 12.5px 15px;
+  border-radius: $form-radius;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  outline: none;
+  animation: pulse 1s linear;
+  -webkit-animation: pulse 1s linear;
+  // box-shadow: 0 0 0 5px rgba(255,70,70, 0.7);
+  cursor: pointer;
+
+  &--primary {
+    background-color: $primary-color;
+    color: #FFF;
+    &:hover {
+      background-color: rgba(255,70,70, 0.9);
+    }
+  }
+
+  &--md {
+    height: 40px;
+  }
+
+  &__text {
+    margin: 0 15px;
+  }
+
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,70,70, 0.7); }
+  100% { box-shadow: 0 0 0 7.5px rgba(255,70,70, 0); }
+}

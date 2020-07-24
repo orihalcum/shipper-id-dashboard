@@ -14,6 +14,37 @@
     height: calc(100% - 64px);
     width: 100%;
     padding: $default-margin-or-padding;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $default-margin-or-padding;
+      &__title {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        color: $primary-color;
+        font-weight: 700;
+      }
+      &__subtitle {
+        font-size: 12px;
+      }
+      &__left {
+
+      }
+      &__right {
+        display: flex;
+      }
+    }
+    &__body {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 15px;
+      div {
+        background-color: #FFF;
+        border-radius: $form-radius;
+        padding: 20px;
+        font-size: 30px;
+      }
+    }
   }
 
 }

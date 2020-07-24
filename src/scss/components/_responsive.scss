@@ -45,6 +45,35 @@
   .main-layout {
     .main-content {
       padding: $default-margin-or-padding-sm;
+      &__header {
+        flex-direction: column;
+        &__title {
+          font-size: 24px;
+        }
+        &__subtitle {
+          font-size: 11px;
+        }
+        &__left {
+          margin-bottom: $default-margin-or-padding;
+        }
+        &__right {
+          .search {
+            width: 100%;
+            input {
+              width: 100%;
+            }
+          }
+          .button {
+            padding: 12.5px 15px;
+            &__text {
+              display: none;
+            }
+          }
+        }
+      }
+      &__body {
+        grid-template-columns: auto;
+      }
     }
   }
 }

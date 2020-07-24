@@ -1,0 +1,38 @@
+.search {
+
+  position: relative;
+
+  input {
+    
+    padding: $form-padding;
+    padding-left: 40px;
+    border: 1px solid $light-grey-color;
+    border-radius: $form-radius;
+
+    &::placeholder {
+      color: $grey-color;
+      font-weight: 500;
+    }
+  
+    &--md {
+      height: 35px;
+      width: 150px;
+    }
+
+    &:focus {
+      border: 1px solid $primary-color;
+      outline: none;
+    }
+    
+  }
+
+  .anticon {
+    svg {
+      color: $primary-color;
+      position: absolute;
+      left: $form-padding;
+      top: $form-padding;
+    }
+  }
+
+}
