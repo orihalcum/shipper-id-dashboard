@@ -22,6 +22,7 @@
     &:focus {
       border: 1px solid $primary-color;
       outline: none;
+      @include animation-pulse;
     }
     
   }

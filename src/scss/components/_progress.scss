@@ -1,0 +1,69 @@
+$textShadow: rgba(black, 0.35) 1px 1px 1px;
+
+.progress--circle {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: $light-grey-color;
+  transform: rotate(180deg);
+  &:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    background-color: $primary-color;
+  }
+}
+
+.progress__number {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  line-height: 1;
+  margin-top: -0.75rem;
+  text-align: center;
+  transform: rotate(180deg);
+  h3 {
+    font-weight: bold;
+    color: $grey-color;
+  }
+  small {
+    font-size: 11px;
+  }
+}
+
+/**
+* $step is set to 5 by default, meaning you can only use percentage classes in increments of five (e.g. 25, 30, 45, 50, and so on). This helps to reduce the size of the final CSS file. If you need a number that doesn't end in 0 or 5, you can change the text percentage while rounding the class up/down to the nearest 5.
+*/
+$step: 5;
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+@for $i from 0 through $loops {
+  .progress--bar.progress--#{$i * $step}:after {
+    width: $i * $step * 1%;
+  }
+  .progress--circle.progress--#{$i * $step}:after {
+    @if $i < $half {
+      $nextDeg: 90deg + ($increment * $i);
+      background-image: linear-gradient(90deg, $light-grey-color 50%, transparent 50%, transparent), linear-gradient($nextDeg, $primary-color 50%, $light-grey-color 50%, $light-grey-color);
+    }
+    @else {
+      $nextDeg: -90deg + ($increment * ($i - $half));
+      background-image: linear-gradient($nextDeg, $primary-color 50%, transparent 50%, transparent), linear-gradient(270deg, $primary-color 50%, $light-grey-color 50%, $light-grey-color);
+    }
+  }
+}

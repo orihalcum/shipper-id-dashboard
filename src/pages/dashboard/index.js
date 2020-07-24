@@ -6,7 +6,7 @@ const PageDashboard = () => {
     <MainLayout>
       <div className="main-content">
         <div style={{ backgroundColor: 'white', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <img src="/shipperLogo.png" alt="shipper" style={{ height: 60 }}/>
+          <img src="/shipperLogo.png" alt="shipper" style={{ height: 40 }}/>
         </div>
       </div>
     </MainLayout>

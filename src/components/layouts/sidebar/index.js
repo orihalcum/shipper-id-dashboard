@@ -25,7 +25,8 @@ const MainSideBar = ({ collapse, toggleSideBar }) => {
   return (
     <div className={ `main-sidebar ${ collapse ? 'collapse' : '' }` }>
       <div className="main-sidebar__logo">
-        <img src="/shipperLogo.png" alt="shipper-logo"/>
+        <img className="main-sidebar__logo__mobile" src="/shipperLogo.png" alt="shipper-logo"/>
+        <img className="main-sidebar__logo__desktop" src={ !collapse ? "/shipperLogo.png" : "/shipperIcon.png" } alt="shipper-logo"/>
         <a href="#" onClick={ () => toggleSideBar(!collapse) } aria-label="menu-fold-unfold">
           <MenuFoldOutlined />
         </a>

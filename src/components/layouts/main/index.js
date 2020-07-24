@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
   }
 
   useEffect(() => {
-    console.log('useEffect collapse', collapse)
+    // console.log('useEffect collapse', collapse)
   }, [collapse])
 
   const sideBarProps = {

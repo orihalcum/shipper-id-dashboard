@@ -1,0 +1,67 @@
+.card {
+  
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 10px;
+
+  &:hover {
+    .card {
+      &__head {
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        background-color: $primary-color;
+        &__title {
+          color: #FFF;
+          b {
+            color: #FFF;
+          }
+        }
+        &__options {
+          display: flex;
+          .anticon {
+            margin-left: 10px;
+            color: #FFF;
+          }
+          .anticon-exclamation-circle {
+            display: block !important;
+          }
+        }
+      }
+    }
+
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__head {
+    padding: $default-margin-or-padding-sm;
+    border-bottom: 1px solid $light-grey-color;
+    display: flex;
+    justify-content: space-between;
+    &__title {
+      font-size: 12px;
+      color: $grey-color;
+      b {
+        color: $primary-color;
+        font-size: bold;
+      }
+    }
+    &__options {
+      display: flex;
+      .anticon {
+        margin-left: 10px;
+        color: $grey-color;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  &__body {
+    padding: 20px $default-margin-or-padding-sm;
+  }
+
+}

@@ -21,6 +21,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: #333;
+  // line-height: 120%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,3 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 .mb-20 { margin-bottom: 20px; }
 .mb-25 { margin-bottom: 25px; }
 .mb-30 { margin-bottom: 30px; }
+
+.color-primary {
+  color: $primary-color !important;
+}

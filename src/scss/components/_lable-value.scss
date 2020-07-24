@@ -1,0 +1,11 @@
+.lable-value {
+  font-size: 12px;
+  margin-top: $default-margin-or-padding-sm;
+  &__lable {
+    color: $grey-color;
+    margin-bottom: 5px;
+  }
+  &__value {
+    color: $black-color;
+  }
+}

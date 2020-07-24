@@ -3,11 +3,16 @@
 @import './base/generals';
 
 // COMPONENTS
+@import './components/mixins';
 @import './components/sidebar';
 @import './components/header';
 @import './components/main';
 @import './components/button';
 @import './components/search';
+@import './components/lable-value';
+@import './components/card';
+@import './components/avatar';
+@import './components/progress';
 @import './components/responsive';
 
 

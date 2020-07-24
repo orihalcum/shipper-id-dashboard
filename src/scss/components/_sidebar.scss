@@ -2,7 +2,7 @@
   
   height: 100vh;
   width: 100%;
-  max-width: 15rem;
+  max-width: 14rem;
   transition: all ease-out .3s;
   overflow: hidden;
 
@@ -41,6 +41,11 @@
         &__title {
           margin-left: $default-margin-or-padding-sm;
           font-size: 13px;
+        }
+        &__icon {
+          .anticon { 
+            svg { font-size: 15px; }
+          }
         }
       }
     }
