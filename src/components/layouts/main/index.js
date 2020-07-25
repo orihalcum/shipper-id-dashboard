@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import MainSideBar from '../sidebar';
 import MainHeader from '../header';
+import { useLocation } from 'react-router-dom'
 
 const MainLayout = ({ children }) => {
 
+  const location = useLocation();
   const [collapse, setCollapse] = useState((localStorage.getItem('collapse') === 'true') || false)
 
   const toggleSideBar = (val) => {
@@ -13,7 +15,8 @@ const MainLayout = ({ children }) => {
   
   const sideBarProps = {
     collapse,
-    toggleSideBar
+    toggleSideBar,
+    location
   }
 
   return (

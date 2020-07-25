@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation, NavLink } from 'react-router-dom'
-
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { HomeOutlined, CalendarOutlined, FileDoneOutlined, CarOutlined, ShopOutlined, PieChartOutlined, UserOutlined, MenuFoldOutlined } from '@ant-design/icons'
+import PropTypes from 'prop-types'
 
 const NAV_MENU = [
   { title: 'Beranda', icon: <HomeOutlined />, link: "/", active: false },
@@ -13,9 +13,8 @@ const NAV_MENU = [
   { title: 'Profil', icon: <UserOutlined />, link: "/profil", active: false },
 ]
 
-const MainSideBar = ({ collapse, toggleSideBar }) => {
+const MainSideBar = ({ collapse, toggleSideBar, location }) => {
 
-  const location = useLocation();
   const [navMenu, setNavMenu] = useState(NAV_MENU)
 
   useEffect(() => {
@@ -40,13 +39,27 @@ const MainSideBar = ({ collapse, toggleSideBar }) => {
   );
 };
 
-const NavItem = ({ title, icon, link, active }) => (
+export const NavItem = ({ title, icon, link, active }) => (
   <div className={ `main-sidebar__nav__item ${ active ? 'active' : '' }` }>
-    <NavLink to={ link } className="main-sidebar__nav__item__link">
+    <Link to={ link } className="main-sidebar__nav__item__link">
       <span className="main-sidebar__nav__item__link__icon">{ icon }</span>
       <span className="main-sidebar__nav__item__link__title">{ title }</span>
-    </NavLink>
+    </Link>
   </div>
 )
 
 export default MainSideBar;
+
+MainSideBar.propTypes = {
+  collapse: PropTypes.bool, 
+  toggleSideBar: PropTypes.func, 
+  location: PropTypes.object
+}
+
+MainSideBar.defaultProps = {
+  collapse: false,
+  toggleSideBar: null,
+  location: {
+    pathname: '/'
+  }
+}

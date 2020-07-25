@@ -1,12 +1,11 @@
 import React from 'react';
 import { MenuFoldOutlined, MenuUnfoldOutlined, PhoneOutlined, BellOutlined } from '@ant-design/icons'
-// import { NavLink } from 'react-router-dom'
 
 const MainHeader = ({ collapse, toggleSideBar }) => {
   return (
     <div className="main-header">
       <div className="main-header__left">
-        <a href="/" onClick={ e => { e.preventDefault(); toggleSideBar(!collapse) } } aria-label="menu-fold-unfold">
+        <a href="/" onClick={ e => { e.preventDefault(); toggleSideBar(!collapse) } } className="toggle-sidebar" aria-label="menu-fold-unfold">
           { !collapse ? <MenuFoldOutlined /> : <MenuUnfoldOutlined /> }
         </a>
       </div>

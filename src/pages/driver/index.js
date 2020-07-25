@@ -45,17 +45,17 @@ const PageDriver = () => {
       <div className="main-content">
         <div className="main-content__header">
           <div className="main-content__header__left">
-            <h1 className="main-content__header__title">Driver Management</h1>
-            <h5 className="main-content__header__subtitle">Daftar Driver yang bekerja dengan Anda</h5>
+            <h1 className="main-content__header__title" data-testid="page-title">Driver Management</h1>
+            <h5 className="main-content__header__subtitle" data-testid="page-subtitle">Daftar Driver yang bekerja dengan Anda</h5>
           </div>
           <div className="main-content__header__right">
-            <Search placeholder="Cari Driver" onChange={ handleChangeSearch } />
-            <Button type='primary' onClick={ handleClick } suffix={ <PlusOutlined /> }>
+            <Search placeholder="Cari Driver" onChange={ handleChangeSearch } data-testid="search-form" />
+            <Button type='primary' onClick={ handleClick } suffix={ <PlusOutlined /> } data-testid="button-add-driver">
               Tambah Driver 
             </Button>
           </div>
         </div>
-        <div className="main-content__body">
+        <div className="main-content__body" data-testid="driver-list">
           { drivers.map(v => <DriverCard key={ v.id } { ...v }/>) }
         </div>
       </div>

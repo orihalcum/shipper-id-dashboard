@@ -9,10 +9,13 @@ import * as serviceWorker from './serviceWorker'
 import PageDriver from './pages/driver'
 import PageDashboard from './pages/dashboard'
 import './scss/index.scss'
+import { createBrowserHistory } from "history"
+
+const history = createBrowserHistory();
 
 const App = () => {
   return (
-    <Router>
+    <Router history={ history }>
       <Switch>
         <Route exact path="/" component={ PageDashboard } />
         <Route exact path="/dashboard" component={ PageDashboard } />
@@ -26,6 +29,8 @@ const App = () => {
     </Router>
   )
 }
+
+export default App;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
