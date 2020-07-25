@@ -1,5 +1,5 @@
 import React from 'react';
-import LableValue from '../label-value';
+import LabelValue from '../label-value';
 import Avatar from '../avatar';
 import { ProgressCircle } from '../progress'
 import { ExclamationCircleOutlined, EllipsisOutlined } from '@ant-design/icons'
@@ -32,14 +32,14 @@ export const DriverCard = ({ id, photo = '/image-user.png', name, phone, schedul
       <div className="container">
         <div className="container__left">
           <Avatar url={ photo } alt={ name } />
-          <LableValue lable="Nama Driver" value={ name } />
-          <LableValue lable="Telepon" value={ phone } />
+          <LabelValue label="Nama Driver" value={ name } />
+          <LabelValue label="Telepon" value={ phone } />
         </div>
         <div className="container__right">
           <ProgressCircle count={ onTime }/>
         </div>
       </div>
-      <LableValue lable="Jadwal" value={ schedule.join(', ') } />
+      <LabelValue label="Jadwal" value={ schedule.join(', ') } />
     </Card>
   )
 }

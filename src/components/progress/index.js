@@ -1,10 +1,13 @@
 import React from 'react';
 
-export const Progress = () => {
-  return null;
-};
+/**
+ * 
+ * Progress Circle with HTML and CSS only
+ * It will be simple if use third party library 😄
+ * 
+ */
 
-export const ProgressCircle = ({ count }) => {
+export const ProgressCircle = ({ count = 0 }) => {
   return (
     <div>
       <div className={ `progress--circle progress--${count}` }>

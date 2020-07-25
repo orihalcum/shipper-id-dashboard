@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { HomeOutlined, CalendarOutlined, FileDoneOutlined, CarOutlined, ShopOutlined, PieChartOutlined, UserOutlined, MenuFoldOutlined } from '@ant-design/icons'
 import PropTypes from 'prop-types'
+import { NAV_MENU } from '../../../config'
+import { MenuFoldOutlined } from '@ant-design/icons'
 
-const NAV_MENU = [
-  { title: 'Beranda', icon: <HomeOutlined />, link: "/", active: false },
-  { title: 'Pickup', icon: <CalendarOutlined />, link: "/pickup", active: false },
-  { title: 'Order', icon: <FileDoneOutlined />, link: "/order", active: false },
-  { title: 'Driver', icon: <CarOutlined />, link: "/driver", active: false },
-  { title: 'Merchant', icon: <ShopOutlined />, link: "/merchant", active: false },
-  { title: 'Laporan', icon: <PieChartOutlined />, link: "/laporan", active: false },
-  { title: 'Profil', icon: <UserOutlined />, link: "/profil", active: false },
-]
 
 const MainSideBar = ({ collapse, toggleSideBar, location }) => {
 
+  // Set state navigation menu here
   const [navMenu, setNavMenu] = useState(NAV_MENU)
 
+  // Set active menu according to the current page using location.pathname comparison
   useEffect(() => {
     let nav = navMenu.map(v => { v.active = location.pathname === v.link; return v; })
     setNavMenu(nav)
@@ -39,6 +33,7 @@ const MainSideBar = ({ collapse, toggleSideBar, location }) => {
   );
 };
 
+// Navigation Item Component
 export const NavItem = ({ title, icon, link, active }) => (
   <div className={ `main-sidebar__nav__item ${ active ? 'active' : '' }` }>
     <Link to={ link } className="main-sidebar__nav__item__link">
@@ -49,6 +44,10 @@ export const NavItem = ({ title, icon, link, active }) => (
 )
 
 export default MainSideBar;
+
+
+// Implement Proptypes, it's very important for component splitting ( especially if use SSR Next.js )
+// but I only put here as an example of PropTypes
 
 MainSideBar.propTypes = {
   collapse: PropTypes.bool, 

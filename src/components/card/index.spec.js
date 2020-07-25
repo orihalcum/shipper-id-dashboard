@@ -48,7 +48,7 @@ describe('Render Driver Card Correctly', () => {
     expect(NodeBodyContainer.className).toBe('container');
     
     expect(NodeBodyLabelValue).toBeInTheDocument();
-    expect(NodeBodyLabelValue.className).toBe('lable-value');
+    expect(NodeBodyLabelValue.className).toBe('label-value');
 
     expect(NodeBodyContainerFirstCild).toBeInTheDocument();
     expect(NodeBodyContainerFirstCild.className).toBe('container__left');

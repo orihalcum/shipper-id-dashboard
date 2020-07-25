@@ -1,3 +1,12 @@
+/**
+ * 
+ * Hi, My Name is Dzulfan Fadli
+ * I do this test as much as possible as I usually do in Payfazz
+ * Layout Structure, Config, Pages, Components
+ * Doing all from scratch. Actually, I usually develop dashboard using Ant Design 
+ * 
+ */
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
@@ -11,9 +20,16 @@ import PageDashboard from './pages/dashboard'
 import './scss/index.scss'
 import { createBrowserHistory } from "history"
 
-const history = createBrowserHistory();
+ /**
+ * 
+ * App using router to switch route like generally react-app
+ * Route Path as mentioned on the UI
+ * Components : Dashboard and Driver
+ * 
+ */
 
 const App = () => {
+  const history = createBrowserHistory();
   return (
     <Router history={ history }>
       <Switch>
