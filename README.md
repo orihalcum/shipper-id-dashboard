@@ -28,13 +28,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 npm start
 ```
 
-## Running the tests
+## Running the Tests
 
-Launches the test runner
+Launches the test runner, Unit Test with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 ```bash
 npm run test
 ```
-Unit test cover general testing from small components, layout, and page. Using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+Unit test cover general testing from small components, layout, and page. 
 
 
 ## See Also
