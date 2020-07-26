@@ -16,6 +16,7 @@ Responsive web dashboard built from scratch with Reactjs and SCSS styling with B
 
 ```bash
 git clone https://github.com/orihalcum/shipper-id-dashboard.git
+cd shipper-id-dashboard
 npm install 
 ```
 
