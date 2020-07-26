@@ -1,6 +1,6 @@
 # Shipper Web Assignment
 
-Built from scratch with Reactjs and SCSS styling with BEM methodology.
+Responsive web dashboard built from scratch with Reactjs and SCSS styling with BEM methodology.
 
 <img src="https://dzulfanfadli.com/images/Shipper-Dashboard.png">
 
@@ -18,7 +18,8 @@ Built from scratch with Reactjs and SCSS styling with BEM methodology.
 git clone https://github.com/orihalcum/shipper-id-dashboard.git
 npm install 
 ```
-## Run Project
+
+## Running Project
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -32,6 +33,8 @@ Launches the test runner
 ```bash
 npm run test
 ```
+Unit test cover general testing from small components, layout, and page. Using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+
 
 ## See Also
 ### Latest Portfolio
