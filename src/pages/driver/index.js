@@ -45,7 +45,6 @@ const PageDriver = () => {
   }
 
   return (
-    // Use Main Layout as Core Layout
     <MainLayout>
       <div className="main-content">
         <div className="main-content__header">
