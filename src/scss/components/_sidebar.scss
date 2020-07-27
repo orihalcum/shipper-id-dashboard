@@ -24,7 +24,6 @@
     overflow-x: hidden;
     &__item {
       border-left: 6px solid transparent;
-      padding: 15px 18px;
       // transition: all ease-in .3s;
       width: 100%;
       min-width: 200px;
@@ -34,6 +33,11 @@
         a {
           color: $primary-color !important;
         }
+      }
+      &__container {
+        height: 100%;
+        width: 100%;
+        padding: 15px 18px;
       }
       &__link { 
         text-decoration: none;

@@ -33,12 +33,24 @@ const MainSideBar = ({ collapse, toggleSideBar, location }) => {
   );
 };
 
+// // Navigation Item Component
+// export const NavItem = ({ title, icon, link, active }) => (
+//   <div className={ `main-sidebar__nav__item ${ active ? 'active' : '' }` }>
+//     <Link to={ link } className="main-sidebar__nav__item__link">
+//       <span className="main-sidebar__nav__item__link__icon">{ icon }</span>
+//       <span className="main-sidebar__nav__item__link__title">{ title }</span>
+//     </Link>
+//   </div>
+// )
+
 // Navigation Item Component
 export const NavItem = ({ title, icon, link, active }) => (
   <div className={ `main-sidebar__nav__item ${ active ? 'active' : '' }` }>
     <Link to={ link } className="main-sidebar__nav__item__link">
-      <span className="main-sidebar__nav__item__link__icon">{ icon }</span>
-      <span className="main-sidebar__nav__item__link__title">{ title }</span>
+      <div className="main-sidebar__nav__item__container">
+        <span className="main-sidebar__nav__item__link__icon">{ icon }</span>
+        <span className="main-sidebar__nav__item__link__title">{ title }</span>
+      </div>
     </Link>
   </div>
 )

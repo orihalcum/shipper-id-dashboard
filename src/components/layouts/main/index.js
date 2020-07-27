@@ -41,6 +41,7 @@ const MainLayout = ({ children }) => {
       setWindowWidth(window.innerWidth)
       if(window.innerWidth <= 600) toggleSideBar(false)
     })
+    return () => null
   }, [windowWidth])
 
   return (
