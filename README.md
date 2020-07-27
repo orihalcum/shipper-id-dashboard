@@ -39,8 +39,8 @@ Unit test cover general testing from small components, layout, and page.
 
 ## See Also
 ### Latest Portfolio
-[Shopfazz Dashboard](https://drive.google.com/file/d/1Ghmg5diL6VMN030Iq50NFCfFoNNXoRxw/view?usp=sharing)
+[Shopfazz Dashboard](https://drive.google.com/file/d/1Ghmg5diL6VMN030Iq50NFCfFoNNXoRxw/view?usp=sharing) using [Ant Design](https://ant.design/)
 
 ### Latest Research Collection
 - [Lunch Recipes](https://dzulfanfadli.com/collections/lunch-recipes)
-- [Sayur Box](https://dzulfanfadli.com/collections/sayur-box)
+- [Sayur Box](https://dzulfanfadli.com/collections/sayur-box) using Next.js and Ant Design Mobile
