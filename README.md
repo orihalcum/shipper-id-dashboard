@@ -17,7 +17,7 @@ Responsive web dashboard built from scratch with Reactjs and SCSS styling with B
 ```bash
 git clone https://github.com/orihalcum/shipper-id-dashboard.git
 cd shipper-id-dashboard
-npm install 
+npm install or yarn
 ```
 
 ## Running Project
@@ -25,14 +25,14 @@ npm install
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ```bash
-npm start
+npm start or yarn start
 ```
 
 ## Running the Tests
 
 Launches the test runner, Unit Test with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 ```bash
-npm run test
+npm run test or yarn test
 ```
 Unit test cover general testing from small components, layout, and page. 
 
