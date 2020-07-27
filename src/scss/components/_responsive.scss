@@ -13,6 +13,8 @@
         span { display: none; }
       }
     }
+    .toggle-sidebar-sm { display: block; }
+    .toggle-sidebar-md { display: none; }
   }
   .main-sidebar {
     position: fixed;
@@ -91,6 +93,8 @@
         border-right: 3px solid $light-grey-color;
       }
     }
+    .toggle-sidebar-sm { display: block; }
+    .toggle-sidebar-md { display: none; }
   }
 
   .main-sidebar {
@@ -151,6 +155,10 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .main-header {
+    .toggle-sidebar-sm { display: none; }
+    .toggle-sidebar-md { display: block; }
+  }
   .main-sidebar {
     max-width: 12rem;
     &__logo {
