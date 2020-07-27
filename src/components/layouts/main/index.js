@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom'
 import MainSideBar from '../sidebar';
 import MainHeader from '../header';
-import { useLocation } from 'react-router-dom'
 
 /**
  * 
@@ -17,8 +17,8 @@ const MainLayout = ({ children }) => {
   // location for handle current location path
   // collapse for handle sidebar collapible
   const location = useLocation();
-  const [collapse, setCollapse] = useState((localStorage.getItem('collapse') === 'true') || false)
-
+  const [collapse, setCollapse] = useState(initCollapse())
+  const [windowWidth, setWindowWidth] = useState(0)
   // Toggle sidebar for handle sidebar toggle
   const toggleSideBar = (val) => {
     setCollapse(val)
@@ -28,12 +28,20 @@ const MainLayout = ({ children }) => {
   }
   
   // Make props simple here
-  // Props can be replace by Context or other State Management Library
+  // Props can be replaced by Context or other State Management Library
   const sideBarProps = {
     collapse,
     toggleSideBar,
     location
   }
+
+  useEffect(() => {
+    // hide navigation for mobile
+    window.addEventListener('resize', () => {
+      setWindowWidth(window.innerWidth)
+      if(window.innerWidth <= 600) toggleSideBar(false)
+    })
+  }, [windowWidth])
 
   return (
     <div className="main-layout">
@@ -47,3 +55,17 @@ const MainLayout = ({ children }) => {
 };
 
 export default MainLayout;
+
+// handle initial collapse desktop and mobile
+// using same source navigation to handle collapsible, need to adjust 
+function initCollapse() {
+  let collapse = false;
+  if(window.innerWidth > 600){
+    if(localStorage.getItem('collapse') === 'true') collapse = true;
+  }
+  return collapse;
+}
+
+
+
+// notes: app height have issue on chrome ipad
