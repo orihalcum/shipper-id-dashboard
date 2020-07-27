@@ -11,22 +11,18 @@ describe('Render Header Correctly', () => {
   })
 
   it('Toggle Correctly', () => {
-
     let collapse = false
     const toggleSideBar = (v) => collapse = v
-
     let props = {
       collapse,
       toggleSideBar
     }
-    
     const { container } = render(<MainHeader { ...props } />)
     let Node = container.querySelector('.main-header')
     let LeftNode = Node.firstElementChild
     let ToggleNode = LeftNode.firstElementChild
-
-    expect(ToggleNode.className).toBe('toggle-sidebar');
-
+    expect(ToggleNode.className).toMatch('toggle-sidebar');
+    
     // doing fireEvent
     
   })

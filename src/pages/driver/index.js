@@ -52,8 +52,8 @@ const PageDriver = () => {
             <PageTitle { ...page } />
           </div>
           <div className="main-content__header__right">
-            <Search placeholder="Cari Driver" onChange={ handleChangeSearch } data-testid="search-form" />
-            <Button type='primary' onClick={ handleClick } suffix={ <PlusOutlined /> } data-testid="button-add-driver">
+            <Search placeholder="Cari Driver" onChange={ handleChangeSearch } />
+            <Button type='primary' onClick={ handleClick } suffix={ <PlusOutlined /> }>
               Tambah Driver 
             </Button>
           </div>

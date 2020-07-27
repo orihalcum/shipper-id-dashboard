@@ -3,9 +3,6 @@ import { render } from '@testing-library/react';
 import Button from '.';
 import { PlusOutlined } from '@ant-design/icons'
 
-const NO_IMAGE = "/image-user.png"
-const EXAMPLE_IMAGE = "https://miro.medium.com/max/3150/0*JiI_YyWUBGHpyiP6."
-
 describe('Render Button Correctly', () => {
 
   let props = {

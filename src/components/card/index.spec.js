@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { DriverCard } from '.';
-// import { PlusOutlined } from '@ant-design/icons'
 
 describe('Render Driver Card Correctly', () => {
 
